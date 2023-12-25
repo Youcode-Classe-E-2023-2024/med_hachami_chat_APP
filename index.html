@@ -3,46 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  
 </head>
 <body>
     <body>
         <div class="w-full h-screen">
             <div class="flex h-full">
-                <div class="hidden xl:block sm:flex-2 w-32 border  bg-gray-200 w-10">
+                <div id="sidebar" class="hidden xl:block sm:flex-2 w-32 border  bg-gray-200 w-10">
                     
-    
-                    <div class="menu mt-8 flex-col ">
-                        <a class="block py-4 px-12 border-l-4 text-gray-600 hover:bg-gray-300 hover:text-black" href="javascript:return false;">
-                            <span class="inline-block align-text-bottom mr-2">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                            </span>
-                            
-                        </a>
-                        <a class="block py-4 px-12 border-l-4 border-gray-800 bg-gray-300 text-black hover:bg-gray-300 hover:text-black" href="javascript:return false;">
-                            <span class="inline-block align-text-bottom mr-2">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                            </span>
-                            
-                        </a>
-                        
-                        <a class="block py-4 px-12 border-l-4 text-gray-600 hover:bg-gray-300 hover:text-black" href="javascript:return false;">
-                            <span class="inline-block align-text-bottom mr-2">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </span>
-                            
-                        </a>
-                    </div>
                 </div>
+               
                 <div class="flex-1 bg-gray-100 w-full h-full">
                     <div class="main-body container m-auto w-11/12 h-full flex flex-col">
                         <div class="py-4 flex-2 flex flex-row">
                             <div class="flex-1">
                                 <span class="xl:hidden inline-block text-gray-700 hover:text-gray-900 align-bottom">
                                     <span class="block h-6 w-6 p-1 rounded-full hover:bg-gray-400">
-                                        <svg class="w-4 h-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                                        <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
                                     </span>
                                 </span>
                                 <span class="lg:hidden inline-block ml-8 text-gray-700 hover:text-gray-900 align-bottom">
@@ -51,9 +30,9 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="flex-1 text-right">
+                            <div class="flex-1 text-right ">
                                 <span class="inline-block text-gray-700">
-                                    Status: <span class="inline-block align-text-bottom w-4 h-4 bg-green-400 rounded-full border-2 border-white"></span> <b>Online</b>
+                                    <span class="inline-block align-text-bottom w-6 h-6 bg-green-400 rounded-full border-2 border-white"></span> <b>Online</b>
                                     <span class="inline-block align-text-bottom">
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"><path d="M19 9l-7 7-7-7"></path></svg>
                                     </span>
@@ -78,7 +57,7 @@
                                         <input type="text" class="outline-none py-2 block w-full bg-transparent border-b-2 border-gray-200" placeholder="Search">
                                     </div>
                                     <div class="flex-1 h-full overflow-auto px-2">
-                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md">
+                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md" onclick="openRoom()">
                                             <div class="flex-2">
                                                 <div class="w-12 h-12 relative">
                                                     <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
@@ -98,136 +77,37 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="truncate w-32"><span class="text-gray-800">Karp Bonolo</span></div>
-                                                <div><small class="text-gray-600">Yea, Sure!</small></div>
-                                            </div>
-                                            <div class="flex-2 text-right">
-                                                <div><small class="text-gray-500">15 April</small></div>
-                                                <div>
-                                                    <small class="text-xs bg-red-500 text-white rounded-full h-6 w-6 leading-6 text-center inline-block">
-                                                        10
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md border-l-4 border-red-500">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="truncate w-32"><span class="text-gray-800">Mercedes Yemelyan</span></div>
-                                                <div><small class="text-gray-600">Yea, Sure!</small></div>
-                                            </div>
-                                            <div class="flex-2 text-right">
-                                                <div><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="truncate w-32"><span class="text-gray-800">Cadi Kajetán</span></div>
-                                                <div><small class="text-gray-600">Yea, Sure!</small></div>
-                                            </div>
-                                            <div class="flex-2 text-right">
-                                                <div><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="entry cursor-pointer transform hover:scale-105 duration-300 transition-transform bg-white mb-4 rounded p-4 flex shadow-md">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="truncate w-32"><span class="text-gray-800">Rina Samuel</span></div>
-                                                <div><small class="text-gray-600">Yea, Sure!</small></div>
-                                            </div>
-                                            <div class="flex-2 text-right">
-                                                <div><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="chat-area flex-1 flex flex-col">
                                     <div class="flex-3">
                                         <h2 class="text-xl py-1 mb-8 border-b-2 border-gray-200">Chatting with <b>Mercedes Yemelyan</b></h2>
                                     </div>
-                                    <div class="messages flex-1 overflow-auto">
-                                        <div class="message mb-4 flex">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="inline-block bg-gray-300 rounded-full p-2 px-6 text-gray-700">
-                                                    <span>Hey there. We would like to invite you over to our office for a visit. How about it?</span>
-                                                </div>
-                                                <div class="pl-4"><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="message mb-4 flex">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
-                                                <div class="inline-block bg-gray-300 rounded-full p-2 px-6 text-gray-700">
-                                                    <span>All travel expenses are covered by us of course :D</span>
-                                                </div>
-                                                <div class="pl-4"><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="message me mb-4 flex text-right">
-                                            <div class="flex-1 px-2">
-                                                <div class="inline-block bg-blue-600 rounded-full p-2 px-6 text-white">
-                                                    <span>It's like a dream come true</span>
-                                                </div>
-                                                <div class="pr-4"><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="message me mb-4 flex text-right">
-                                            <div class="flex-1 px-2">
-                                                <div class="inline-block bg-blue-600 rounded-full p-2 px-6 text-white">
-                                                    <span>I accept. Thank you very much.</span>
-                                                </div>
-                                                <div class="pr-4"><small class="text-gray-500">15 April</small></div>
-                                            </div>
-                                        </div>
-                                        <div class="message mb-4 flex">
-                                            <div class="flex-2">
-                                                <div class="w-12 h-12 relative">
-                                                    <img class="w-12 h-12 rounded-full mx-auto" src="./assets/med hachami.jpg" alt="chat-user" />
-                                                    <span class="absolute w-4 h-4 bg-gray-400 rounded-full right-0 bottom-0 border-2 border-white"></span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 px-2">
+                                    <div class="messages flex-1 overflow-auto" id="msgContainer">
+                                        <!-- <div class="message me mb-4 flex text-right">
+                                            <div class="flex-1 px-2" id="msgSentByMeContainer">
+                                                <div class="flex-1 px-2">
                                                 <div class="inline-block bg-gray-300 rounded-full p-2 px-6 text-gray-700">
                                                     <span>You are welome. We will stay in touch.</span>
                                                 </div>
                                                 <div class="pl-4"><small class="text-gray-500">15 April</small></div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </div> -->
+                                        
+                                        <!-- <div class="message mb-4 flex" id="msgSentByRoomMatesContainer">
+                                            <div class="message me mb-4 flex text-left">
+                                                <div class="flex-1 px-2" id="msgSentByMeContainer">
+                                                    <div class="flex-1 px-2">
+                                                    <div class="inline-block bg-gray-300 rounded-full p-2 px-6 text-gray-700">
+                                                        <span>You are welome. We will stay in touch.</span>
+                                                    </div>
+                                                    <div class="pl-4"><small class="text-gray-500">15 April</small></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                     </div>
                                     <div class="flex-2 pt-4 pb-10">
                                         <div class="write bg-white shadow flex rounded-lg">
@@ -237,7 +117,7 @@
                                                 </span>
                                             </div>
                                             <div class="flex-1">
-                                                <textarea name="message" class="w-full block outline-none py-4 px-4 bg-transparent" rows="1" placeholder="Type a message..." autofocus></textarea>
+                                                <textarea id="message" name="message" class="w-full block outline-none py-4 px-4 bg-transparent" rows="1" placeholder="Type a message..." autofocus></textarea>
                                             </div>
                                             <div class="flex-2 w-32 p-2 flex content-center items-center">
                                                 <div class="flex-1 text-center">
@@ -248,7 +128,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="flex-1">
-                                                    <button class="bg-blue-400 w-10 h-10 rounded-full inline-block">
+                                                    <button class="bg-blue-400 w-10 h-10 rounded-full inline-block" onclick="sendMessage()">
                                                         <span class="inline-block align-text-bottom">
                                                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 text-white"><path d="M5 13l4 4L19 7"></path></svg>
                                                         </span>
@@ -265,5 +145,7 @@
             </div>
         </div>
     </body>
+    <script src="./Components/SideBar.js"></script>
 </body>
+
 </html> 
