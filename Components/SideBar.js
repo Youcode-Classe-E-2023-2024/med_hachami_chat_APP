@@ -16,13 +16,20 @@ function generateSideBar() {
             
         </a>
         
-        <a class="min-h-16 block py-10 px-12 border-l-4 text-gray-600 hover:bg-gray-300 hover:text-black" href="javascript:return false;">
+        <a class="min-h-16 mb-20 block py-10 px-12 border-l-4 text-gray-600 hover:bg-gray-300 hover:text-black" href="javascript:return false;">
             <span class="inline-block align-text-bottom mr-2">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             </span>
             
         </a>
+        <a class="mt-16 py-10 px-12 ">
+            <img src="${imgStore}${profileImg}" class="w-16 h-16 relative left-7 rounded-2xl" alt="" srcset="">  
+        </a>
+        <a class=" min-h-16 block py-10 px-12 border-l-4 text-gray-600 hover:bg-gray-300 hover:text-black">
+            <img src="../assets/logout-icon.png" alt="" srcset="">  
+        </a>
     </div>
+    
 
   
     `;
@@ -36,9 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }   
 });
 const apiUrl = "http://localhost/med_hachami_chat/";
+const imgStore = "http://localhost/med_Hachami_chat/public/store/";
 const  ws = new WebSocket('ws://localhost:8081');
 let ressourceId;
 let messageInput = document.getElementById("message");
+
 // open the connection and get the id of the connection
 ws.addEventListener('open', (event) => {
     console.log('WebSocket connection opened:', event);
@@ -52,7 +61,10 @@ ws.addEventListener('open', (event) => {
 });
 // enter inside the room
 function openRoom(){
-
+    let chat1 = document.querySelector(".chat-area1");
+    chat1.classList.add("hidden");
+    let chat2 = document.querySelector(".chat-area2");
+    chat2.classList.remove("hidden");
     const message = {
         "sentBy":ressourceId,
         "room": "salma_med",
@@ -130,4 +142,49 @@ function displayRoomMatesMsg(message){
     
     
     
+}
+
+
+const profileImg = localStorage.getItem("image");
+const id = localStorage.getItem("id");
+const fullName = localStorage.getItem("fullName");
+const token = localStorage.getItem('token');
+
+function hasToken() {
+    const token = localStorage.getItem('token');
+    return token !== null && token !== undefined;
+}
+function isTokenExpired() {
+    const token = localStorage.getItem('token');
+    const decodedToken = decodeJWT(token);
+
+    return decodedToken && decodedToken.exp && decodedToken.exp * 1000 < Date.now();
+}
+
+
+function redirectToLogin() {
+    window.location.href = 'login.html';
+}
+
+
+if (!hasToken() || isTokenExpired()) {
+    redirectToLogin();
+}
+
+function logOut(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('id');
+    localStorage.removeItem('fullName');
+    localStorage.removeItem('email');
+    localStorage.removeItem('image');
+    window.location.href = '/login.html';
+}
+
+function decodeJWT(token) {
+    
+    const [header, payload, signature] = token.split('.');
+    const decodedPayload = JSON.parse(atob(payload));
+  
+    
+    return decodedPayload;
 }
